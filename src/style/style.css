@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+nav {
+  backdrop-filter: blur(10px);
+}
+
+.navbar-brand {
+  color: #fff;
+  font-size: 30px;
+}
+
+.navbar-brand:before {
+  content: '';
+  position: absolute;
+  background: tomato;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  transform-origin: left;
+  transform: scaleX(0);
+  transition: 0.5s;
+}
+
+.navbar-brand:hover:before {
+  transform: scale(1.1);
+  font-weight: bolder;
+}
+
+.nav-link {
+  display: block;
+  position: relative;
+  padding: 0 5px 0 5px;
+  color: #fff;
+  transition: 0.5s;
+}
+
+.nav-link:hover {
+  transform: scale(1.2);
+  opacity: 1;
+  color: #000;
+}
+
+.nav-link:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: tomato;
+  transition: 0.5s;
+  transform-origin: right;
+  transform: scaleX(0);
+  z-index: -1;
+}
+
+.nav-link:hover:before {
+  transition: transform 0.5s;
+  transform-origin: left;
+  transform: scaleX(1);
+}
+
+.navbar-toggler span {
+  display: block;
+  width: 23px;
+  height: 3px;
+  background-color: rgb(248, 248, 248);
+  margin: 5px 0;
+  border-radius: 3px;
+  transition: 1s ease-in-out;
+}
+
+#jumbotron {
+  min-height: 70vh;
+  min-width: 100%;
+  background-image: url('../img/japan.png');
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+#jumbotron h1 {
+  font-size: 80px;
+  padding: 4rem 0 2rem 0;
+}
+
+.anime-card {
+  padding: 0;
+  margin: 8px;
+  width: 170px;
+  height: 310px;
+  overflow: hidden;
+}
+
+.anime-poster {
+  width: 170px;
+  height: 255px;
+}
+
+.anime-poster img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.anime-info {
+  color: rgb(248, 249, 250);
+  display: flex;
+  width: 100%;
+  height: 55px;
+  justify-content: space-between;
+  padding: 7px 0;
+}
+
+.anime-info p {
+  font-weight: 500;
+  font-size: 15px;
+}
+
+.anime-info span {
+  color: rgb(33, 37, 41);
+  background-color: rgb(255, 193, 7);
+  padding: 0 7px;
+  height: 20px;
+  font-size: 10px;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+}
+
+.pilihan {
+  width: 50%;
+}
+
+@media screen and (max-width: 576px) {
+  .navbar-brand {
+    font-size: 25px;
+  }
+
+  #jumbotron h1 {
+    font-size: 30px;
+  }
+
+  .anime-card {
+    width: 120px;
+    height: 210px;
+  }
+
+  .anime-poster {
+    width: 120px;
+    height: 160px;
+  }
+
+  .pilihan {
+    width: 90%;
+  }
+}
